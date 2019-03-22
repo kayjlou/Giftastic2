@@ -1,16 +1,16 @@
 //array of buttons
-const makeButtons = () => {
-  let topics = ["dogs", "cats", "penguins"];
-  //Empty buttons
-  // document.querySelector("#buttons-view").empty();
-  //Loop through array of items
-  for (i = 0; i < topics.length; i++) {
-    let btn = document.createElement("button");
-    btn.className = "buttons";
-    btn.textContent = topics[i];
-    document.querySelector("#buttons").append(btn);
-  }
-};
+// const makeButtons = () => {
+//   let topics = ["dogs", "cats", "penguins"];
+//   //Empty buttons
+//   // document.querySelector("#buttons-view").empty();
+//   //Loop through array of items
+//   for (i = 0; i < topics.length; i++) {
+//     let btn = document.createElement("button");
+//     btn.className = "buttons";
+//     btn.textContent = topics[i];
+//     document.querySelector("#buttons").append(btn);
+//   }
+// };
 makeButtons();
 
 const searchGif = () => {
