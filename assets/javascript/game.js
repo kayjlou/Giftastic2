@@ -6,8 +6,8 @@ const searchGif = () => {
   event.preventDefault();
   //Define animal to search through API
   let animal =
-    document.querySelector("#button-input").value.length >= 3
-      ? document.querySelector("#button-input").value
+    document.querySelector("#animal").value.length >= 3
+      ? document.querySelector("#animal").value
       : "Kittens";
   //Fetch
   fetch(
@@ -15,26 +15,27 @@ const searchGif = () => {
   )
     .then(r => r.json())
     .then(r => {
-      console.log(
-        r.data.forEach(gifObject => {
-          //Create new image tag
-          imgElem = document.createElement("img");
-          //Define rating
-          rating = gifObject.rating;
-          //Animate or still variables
-          let urlStill = gifObject.images.fixed_height_still.url;
-          let urlAnimate = gifObject.images.fixed_height.url;
-          let ratingPtag = (document.createElement("p").innerHTML =
-            "Rating is ");
+      document.querySelector("#text").innerHTML = `<h4> ${animal} </h4>`;
+      //iterates through elements
+      r.data.forEach(gifObject => {
+        //Create new image tag
+        imgElem = document.createElement("img");
+        //Define rating
+        rating = gifObject.rating;
+        //Animate or still variables
+        let urlStill = gifObject.images.fixed_height_still.url;
+        let urlAnimate = gifObject.images.fixed_height.url;
+        // let ratingTag = (document.createElement(
+        //   "span"
+        // ).innerHTML = `Rating is ${rating}`);
 
-          //Display non moving
+        //Display non moving
 
-          imgElem.setAttribute("src", urlAnimate);
-          imgElem.setAttribute("data-animate", urlAnimate);
-          imgElem.setAttribute("data-still", urlStill);
-          imgElem.setAttribute("data-state", "animate");
-          document.querySelector("#gif-view").append(imgElem, ratingPtag);
-        })
-      );
+        imgElem.setAttribute("src", urlAnimate);
+        imgElem.setAttribute("data-animate", urlAnimate);
+        imgElem.setAttribute("data-still", urlStill);
+        imgElem.setAttribute("data-state", "animate");
+        document.querySelector("#gif-view").append(imgElem);
+      });
     });
 };
