@@ -27,17 +27,20 @@
       <!-- Buttons go here -->
       <div class="btn-group btn-group-lg">
         <div id="buttons-view"></div>
-        <br />
-
-        <!-- Form that will make the button -->
+      </div>
+      <form>
+        <label for="gif"> Choose a search!</label>
+        <input type="text" name="animal" id="animal" />
+        <button onclick="searchGif()">Search</button>
+      </form>
+      <!-- Form that will make the button
         <form id="button-form">
           <label for="button-input">Add an animal</label>
           <input type="text" id="button-input" /><br />
 
-          <!-- This will add another button -->
+         
           <input id="add-animal" type="submit" value="Submit" />
-        </form>
-      </div>
+        </form> -->
 
       <!-- Gifs go here -->
       <div id="gif-view"></div>
