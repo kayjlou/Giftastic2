@@ -1,3 +1,9 @@
+//Array of topics
+let topics = ["dog", "cat"];
+
+//
+let isAnimated = true;
+
 //array of buttons
 // const makeButtons = () => {
 //   let topics = ["dogs", "cats", "penguins"];
@@ -11,11 +17,11 @@
 //     document.querySelector("#buttons").append(btn);
 //   }
 // };
-makeButtons();
+// makeButtons();
 
 const searchGif = () => {
   //Prevent form from refreshing
-  event.preventDefault();
+
   //Define animal to search through API
   let animal =
     document.querySelector("#animal").value.length >= 3
