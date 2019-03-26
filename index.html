@@ -14,33 +14,34 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game2.js"></script>
   </head>
 
   <body>
     <div class="container">
       <div class="header">
         <h1>GifTastic</h1>
-        <p>Click a button or type and add your own!!</p>
+        <p>Click a button to search or type and add your own!!</p>
       </div>
 
       <!-- Buttons go here -->
       <div class="btn-group btn-group-lg">
         <div id="buttons"></div>
       </div>
-      <form>
+
+      <!-- <form>
         <label for="gif"> Choose a search!</label>
         <input type="text" name="animal" id="animal" />
         <button onclick="searchGif()">Search</button>
-      </form>
-      <!-- Make standard buttons -->
-      <div id="text"></div>
-      <!-- Form that will make the button -->
-      <form id="button-form">
-        <label for="button-input">Add an animal</label>
-        <input type="text" id="button-input" /><br />
+      </form> -->
 
-        <input id="add-animal" type="submit" value="Submit" />
+      <!-- Form that will make the button -->
+      <form>
+        <label for="button-input">Add an animal</label>
+        <input type="text" id="add-animal" /><br />
+
+        <button id="animalBtn">ADD</button>
+        <!-- <input id="add-animal" type="submit" value="Add" /> -->
       </form>
 
       <!-- Gifs go here -->
