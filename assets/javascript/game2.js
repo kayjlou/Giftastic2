@@ -3,7 +3,8 @@ let topics = ["dogs"];
 let isAnimated = true;
 
 //Gather text input
-document.querySelector("#animalBtn").addEventListener("click", e => {
+let animalBtn = document.querySelector("#animals");
+animalBtn.addEventListener("click", e => {
   //Prevent reload
   e.preventDefault();
   document.querySelector("#buttons").empty();
